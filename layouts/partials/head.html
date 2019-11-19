@@ -1,13 +1,20 @@
 <div class="header">
+	{{ if .Site.Params.Avatar }}
+		<div class="avatar">
+			<a href="{{ .Site.BaseURL }}">
+				<img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}" />
+			</a>
+		</div>
+	{{ end }}
 	<h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 	<div class="site-description">
 		{{- if isset .Site.Params "subtitle" -}}
-		<h2>{{ .Site.Params.Subtitle | markdownify }}</h2>
+		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
 		<nav class="nav social">
 			<ul class="flat">
 				{{- range $index, $key := .Site.Params.Social -}}
-				<a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+					<li><a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a></li>
 				{{- end -}}
 			</ul>
 		</nav>

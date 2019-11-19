@@ -4,12 +4,14 @@ body {
 }
 
 ::-moz-selection {
-    background: #666;
+	background: #9375fd;
+	color: #fff;
     text-shadow: none
 }
 
 ::selection {
-    background: #666;
+	background: #9375fd;
+	color: #fff;
     text-shadow: none
 }
 
@@ -26,7 +28,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a,a:hover {
-	color: #ff7979;
+	color: #9375fd;
 	text-decoration: none;
 }
 

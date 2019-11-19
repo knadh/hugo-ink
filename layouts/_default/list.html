@@ -7,17 +7,38 @@
 		{{ partial "head.html" . }}
 
 		{{ if isset .Data "Term" }}
-			<h1>Entries tagged - "{{ .Data.Term }}"</h1>
+			<h2>{{ .Data.Term }}</h2>
 		{{ else }}
-			<h1 class="page-title">All articles</h1>
+			<h2 class="page-title">All posts</h2>
 		{{ end }}
 
-		<ul class="posts">
+		<ul class="posts flat">
 			{{- range .Data.Pages -}}
 			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
 			{{- else -}}
 			<li class="post">
-				<a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</span>
+				<div class="post-header">
+					<div class="meta">
+						<div class="date">
+							<span class="day">{{ dateFormat "02" .Date }}</span>
+							<span class="rest">{{ dateFormat "Jan 2006" .Date }}</span>
+						</div>
+					</div>
+					<div class="matter">
+						<h4 class="title small">
+							<a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
+						</h4>
+						<span class="description">
+							{{ if isset .Params "description" }}
+								{{ .Description }}
+							{{ else if gt (len .RawContent) 120 }}
+								{{ slicestr .RawContent 0 120 }}...
+							{{ else }}
+								{{ .RawContent }}
+							{{ end }}
+						</span>
+					</div>
+				</div>
 			</li>
 			{{- end -}}
 			{{- end -}}

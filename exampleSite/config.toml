@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Ezhil"
-theme = "ezhil"
+title = "Ink"
+theme = "ink"
 paginate = 5
 
 copyright = "© Copyright notice"
@@ -11,17 +11,25 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 googleAnalytics = "UA-123-45"
-disqusShortname = "ezhil-demo"
+disqusShortname = "ink-demo"
 
 [params]
-	subtitle = "Clean and minimal personal [blog theme for Hugo](https://github.com/vividvilla/ezhil)"
+	subtitle = "Crisp, minimal personal [blog theme for Hugo](https://github.com/knadh/hugo-ink)"
+
+	# Optional 64x64 avatar image.
+	avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
+
+	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
+	
 	featherIconsCDN = true
-	mode = "auto" # "dark" or "auto"
+
+	mode = "dark" # "dark" or "auto"
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
 	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
 
+# Nav.
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -45,7 +53,7 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/vividvilla/ezhil"
+url = "https://github.com/knadh/ink"
 
 [[params.social]]
 name = "RSS"
