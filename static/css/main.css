@@ -1,29 +1,52 @@
-body {
-    font-family: "ubuntu", sans-serif;
+@font-face {
+    font-family: 'Inter';
+    font-display: auto;
+    font-style:  normal;
     font-weight: 400;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
+    src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2") format("woff2"),
+         url("https://rsms.me/inter/font-files/Inter-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-display: auto;
+    font-style:  normal;
+    font-weight: 500;
+    src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2") format("woff2"),
+         url("https://rsms.me/inter/font-files/Inter-Medium.woff") format("woff");
 }
 
-a, a:hover {
-    color: #a00;
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.8em;
+    font-size: 17px;
+}
+
+a {
+    color: #3700ff;
     text-decoration: none;
     word-break: break-word;
 }
+    a:hover {
+        border-bottom: 2px solid #3700ff;
+    }
 
 html,button,input,select,textarea {
     color: #333;
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #3700ff;
     text-shadow: none;
+    color: #fff;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #3700ff;
     text-shadow: none;
+    color: #fff;
 }
 
 hr {
@@ -66,7 +89,7 @@ blockquote {
     font-size: 1.4rem;
     font-family: Georgia,bitstream charter,serif;
     border-left: 3px solid;
-    border-color: #a00;
+    border-color: #3700ff;
     padding-left: 20px;
 }
 
@@ -79,20 +102,12 @@ blockquote em {
     font-weight: 600;
 }
 
-a,a:hover {
-    color: #a00;
-    text-decoration: none
-}
 
-a:hover {
-    text-decoration: underline
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: raleway,sans-serif;
-    line-height: 1.2;
+h1, h2, h3, h4, h5, h6 {
     color: #333;
-    font-weight: 200;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin: 30px 0 20px 0;
 }
 
 h1 {
@@ -131,10 +146,6 @@ h6 {
     text-align: right;
 }
 
-.container {
-    max-width: 800px;
-}
-
 ul {
     padding-left: 15px;
 }
@@ -154,21 +165,12 @@ ul.flat li {
     min-height: .1rem
 }
 
-.page-title {
-    margin: 0;
-}
-
 .smaller {
     font-size: 70%;
 }
 
 ul {
     list-style: disc inside;
-}
-
-.site-title a {
-	color: #333;
-	text-decoration: none !important;
 }
 
 .post ul li {
@@ -197,6 +199,7 @@ ul {
 }
 
 .container {
+    max-width: 800px;
     margin-top: 50px;
 }
 
@@ -205,45 +208,55 @@ ul {
     padding-bottom: 20px;
 }
 
-.header h1,
-.header h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
-    line-height: 1.3em;
+.header .avatar {
+    float: left;
+    margin: -25px 20px 0 0;
 }
-
-.header h2 {
-    font-size: 1.125rem;
+.header .avatar img {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 100%;
 }
-
-.header nav {
-    margin-top: 20px;
-    border-top: 1px solid #f4f4f4;
+.header .site-title {
+    margin: 0 0 10px 0;
+    line-height: 0.2em;
 }
-
-.header nav ul,
-.header nav li {
-    margin: 0;
-}
-
-.header nav ul.flat {
-    padding: 0;
-}
-
-.header nav ul.flat li {
-    display: inline-block;
-    list-style: none;
-    margin-left: 0;
-    margin-right: 10px;
-    margin-top: 10px;
-    text-transform: capitalize;
-}
+    .site-title a {
+        color: #333;
+        text-decoration: none !important;
+    }
+    .site-title a:hover {
+        border-bottom-width: 3px;
+    }
 
 .header .site-description {
     display: flex;
     justify-content: space-between;
 }
+
+.header nav {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.header nav ul,
+.header nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.header nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px 0 0;
+}
+    .header nav.social a {
+        color: #333;
+    }
+    .header nav.social a:hover {
+        color: #3700ff;
+    }
 
 .header .site-description nav {
     margin: 0;
@@ -267,36 +280,42 @@ ul {
 }
 
 .recent-posts .posts .post {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 }
 
-.recent-posts .posts .post .meta,
-.post .post-header .meta,
-.list .posts .post .meta {
-    font-size: 0.725rem;
-    color: #999;
-    margin-bottom: 4px;
+.post-header {
+    display: flex;
+}
+.post-header .meta .date {
+    margin-right: 30px;
+    width: 64px;
+    text-align: center;
+}
+.post-header .meta .date .day {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 0.45em;
+    font-size: 3em;
+    display: block;
+    margin-bottom: 20px;
+}
+.post-header .meta .date .rest {
+    display: block;
+    font-size: 0.75em;
+}
+.post-header h1.title {
+    margin: -10px 0 0 0;
 }
 
+.post .title.small {
+    margin: 0 0 10px 0;
+}
 .post .post-header {
     margin-bottom: 30px;
 }
 
-.post .post-header .title {
-    margin: 0;
-}
-
-.post-tags a {
-	margin-right: 5px;
-}
-
-.post .post-header .meta {
-    padding-left: 5px;
-    margin-top: 10px;
-}
-
 .post .draft-label {
-    color: #a00;
+    color: #3700ff;
     text-decoration: none;
     padding: 2px 4px;
     border-radius: 4px;
@@ -304,24 +323,19 @@ ul {
     background-color: #f9f2f4;
 }
 
-.post-tags .tags li {
-    margin-bottom: 0;
-    margin-top: 20px;
-}
-
-.post-tags .tags a {
+.post .tags a {
     display: inline-block;
-    border: 1px solid #a00;
-    border-radius: 4px;
+    border: 1px solid #3700ff;
+    border-radius: 3px;
     padding: 0px 6px;
-    color: #a00;
+    color: #3700ff;
     line-height: 20px;
-    font-size: 12px;
+    font-size: 0.85em;
     text-decoration: none;
-    margin: 0 1px;
+    margin: 0 10px 0 0;
 }
 
-.list .posts .post .meta {
+.list .posts .post-header .meta {
     margin-bottom: 0;
     margin-left: 5px;
 }
@@ -331,13 +345,15 @@ ul {
     font-size: 0.75em;
     color: #999;
     border-top: 1px solid #f4f4f4;
-    padding: 20px 0;
     margin-top: 40px;
+    padding: 15px 0;
 }
-
-.page-title {
-    margin-bottom: 0;
-}
+    .footer a {
+        color: #666;
+    }
+    .footer a:hover {
+        color: #3700ff;
+    }
 
 .tag-cloud {
     margin-top: 20px;
@@ -398,5 +414,13 @@ ul {
 
     .container {
         margin-top: 10px;
+    }
+
+    .header .nav.social li {
+        margin: 0;
+    }
+    .header .nav li {
+        margin: 0 10px 0 0;
+        font-size: 14px;
     }
 }
