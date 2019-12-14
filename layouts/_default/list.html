@@ -9,7 +9,7 @@
 		{{ if isset .Data "Term" }}
 			<h2>{{ .Data.Term }}</h2>
 		{{ else }}
-			<h2 class="page-title">All posts</h2>
+		<h2 class="page-title">{{ .Name }}</h2>
 		{{ end }}
 
 		<ul class="posts flat">
