@@ -15,7 +15,7 @@
 							<div class="meta">
 								<div class="date">
 									<span class="day">{{ dateFormat "02" .Date }}</span>
-									<span class="rest">{{ dateFormat "Jan 2006" .Date }}</span>
+							<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
 								</div>
 							</div>
 							<div class="matter">
