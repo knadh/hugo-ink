@@ -23,12 +23,23 @@ cd themes
 git clone https://github.com/knadh/hugo-ink.git
 ```
 
-For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
+For more information read the
+[official setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
+## Disqus
+
+You can fully disable or enable Disqus with the param `enableDisqus`. It uses
+a boolean (true or false). If you set `enableDisqus = true`, you are able to
+specify which content types you want to disable Disqus for. There is more info
+about this feature in the section **Content type** below.
 
 ## Content type
 
-You can specify content type with field `type` in your content. For example static pages can be set as type `page` which are excluded from recent posts and all posts page. You can use site params `mainSections` and `disableDisqusTypes` to control which page types are excluded from recent posts and Disqus comments respectively.
+You can specify content type with field `type` in your content. For example
+static pages can be set as type `page` which are excluded from recent posts
+and all posts page. You can use site params `mainSections` and
+`disableDisqusTypes` to control which page types are excluded from recent
+posts and Disqus comments respectively.
 
 ```md
 ---
@@ -42,10 +53,9 @@ This is some static page where you can write about yourself.
 
 ## Language Settings for the month
 
-Due to the currently unavailable feature for multilingual dates in ``.Date`` from
-Go. It is possible to create a ``month.yaml`` in the data folder of your
-Hugo site root directoy. There is also an example file in
-``exampleSite/data/``.
+Due to the currently unavailable feature for multilingual dates in `.Date`
+from Go. It is possible to create a `month.yaml` in the data folder of your
+Hugo site root directoy. There is also an example file in `exampleSite/data/`.
 
 ```sh
 cat > month.yaml << EOF
