@@ -391,7 +391,7 @@ ul {
     text-align: right;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
     body {
         padding: 20px;
     }
