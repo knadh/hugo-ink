@@ -1,0 +1,15 @@
+# i18n/en.yaml
+- id: info
+  translation: "theme on"
+
+- id: prevpage
+  translation: "← Prev page"
+
+- id: nextpage
+  translation: "Next page →"
+
+- id: javadisqus
+  translation: "Please enable JavaScript to view the"
+
+- id: commentsdisqus
+  translation: "comments powered by"

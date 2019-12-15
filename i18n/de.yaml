@@ -1,0 +1,15 @@
+# i18n/de.yaml
+- id: info
+  translation: "Oberfläche für"
+
+- id: prevpage
+  translation: "← Vorherige Seite"
+
+- id: nextpage
+  translation: "Nächste Seite →"
+
+- id: javadisqus
+  translation: "Bitte aktiviere JavaScript"
+
+- id: commentsdisqus
+  translation: "Kommentare unterstützt durch"
