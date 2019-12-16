@@ -1,27 +1,40 @@
 @font-face {
-    font-family: 'Inter';
+    font-family: 'Roboto Regular';
     font-display: auto;
     font-style:  normal;
     font-weight: 400;
-    src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2") format("woff2"),
-         url("https://rsms.me/inter/font-files/Inter-Regular.woff") format("woff");
-  }
-  
-  @font-face {
-    font-family: 'Inter';
+    src: local('Roboto Regular'), url('../webfonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
     font-display: auto;
     font-style:  normal;
     font-weight: 500;
-    src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2") format("woff2"),
-         url("https://rsms.me/inter/font-files/Inter-Medium.woff") format("woff");
+    src: local('Roboto Medium'), url('../webfonts/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    font-display: auto;
+    font-style:  normal;
+    font-weight: 600;
+    src: local('Roboto Bold'), url('../webfonts/Roboto-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Slab Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto Slab Regular'), url('../webfonts/RobotoSlab-Regular.woff') format('woff');
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto Regular", sans-serif;
     font-weight: 400;
     color: #333;
-    line-height: 1.8em;
-    font-size: 17px;
+    line-height: 1.6em;
+    font-size: 18px;
 }
 
 a {
@@ -30,7 +43,7 @@ a {
     word-break: break-word;
 }
     a:hover {
-        border-bottom: 2px solid #3700ff;
+        color: #808080;
     }
 
 html,button,input,select,textarea {
@@ -85,9 +98,8 @@ textarea {
 
 blockquote {
     margin-left: 1rem;
-    font-style: italic;
-    font-size: 1.4rem;
-    font-family: Georgia,bitstream charter,serif;
+    font-size: 1.2rem;
+    font-family: "Roboto Slab Regular",serif;
     border-left: 3px solid;
     border-color: #3700ff;
     padding-left: 20px;
@@ -204,8 +216,7 @@ ul {
 }
 
 .header {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .header .avatar {
@@ -213,8 +224,8 @@ ul {
     margin: -25px 20px 0 0;
 }
 .header .avatar img {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     border-radius: 100%;
 }
@@ -224,10 +235,11 @@ ul {
 }
     .site-title a {
         color: #333;
-        text-decoration: none !important;
+        text-decoration: none;
     }
     .site-title a:hover {
-        border-bottom-width: 3px;
+        text-decoration: none;
+        color: #808080;
     }
 
 .header .site-description {
@@ -292,19 +304,23 @@ ul {
     text-align: center;
 }
 .post-header .meta .date .day {
-    font-family: "Playfair Display", serif;
+    font-family: "Roboto Slab Regular", serif;
     font-weight: 700;
     line-height: 0.45em;
     font-size: 3em;
     display: block;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .post-header .meta .date .rest {
     display: block;
-    font-size: 0.75em;
+    font-size: 0.85em;
+    font-family: "Roboto Slab Regular", serif;
 }
 .post-header h1.title {
     margin: -10px 0 0 0;
+    font-family: "Roboto Slab Regular", serif;
+    font-weight: bold;
 }
 
 .post .title.small {
@@ -423,4 +439,27 @@ ul {
         margin: 0 10px 0 0;
         font-size: 14px;
     }
+}
+
+.icons {
+  color: #000000;
+  font-size: 1.2rem;
+  margin: 0 5px 0 5px;
+}
+
+.icons:hover {
+  color: #808080;
+}
+
+.footer a:hover {
+  color: #000000;
+}
+
+.page-title {
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.li-social {
+  margin: 0 10px 0 0 !important;
 }

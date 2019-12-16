@@ -23,8 +23,6 @@ disqusShortname = "ink-demo"
 	enableDisqus = true
 	disableDisqusTypes = ["page"]
 
-	featherIconsCDN = true
-
 	mode = "auto" # "dark" or "auto"
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
@@ -53,12 +51,12 @@ weight = 4
 
 [[params.social]]
 name = "Github"
-icon = "github"
+icon = "fab fa-github"
 url = "https://github.com/knadh/hugo-ink"
 
 [[params.social]]
 name = "RSS"
-icon = "rss"
+icon = "fas fa-rss"
 url = "/index.xml"
 
 [taxonomies]

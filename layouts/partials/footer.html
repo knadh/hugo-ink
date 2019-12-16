@@ -1,10 +1,7 @@
 <div class="footer wrapper">
 	<nav class="nav">
-		<div>{{ with .Site.Copyright }} {{ . | safeHTML }} | {{ end }} <a href="https://github.com/knadh/hugo-ink">Ink</a> {{ i18n "info" }} <a href="https://gohugo.io">Hugo</a></div>
+		<div class="footertext">{{ with .Site.Copyright }} {{ . | safeHTML }} | {{ end }} <a href="https://github.com/knadh/hugo-ink">Ink</a> {{ i18n "info" }} <a href="https://gohugo.io">Hugo</a></div>
 	</nav>
 </div>
 
 {{ template "_internal/google_analytics_async.html" . }}
-{{- with .Site.Params.Social -}}
-<script>feather.replace()</script>
-{{- end -}}

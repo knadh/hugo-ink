@@ -14,7 +14,7 @@
 		<nav class="nav social">
 			<ul class="flat">
 				{{- range $index, $key := .Site.Params.Social -}}
-					<li><a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a></li>
+					<li class="li-social"><a href="{{ $key.url }}"><i title="{{ $key.name }}" class="icons {{ $key.icon }}"></i></a></li>
 				{{- end -}}
 			</ul>
 		</nav>

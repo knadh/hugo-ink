@@ -13,6 +13,7 @@ Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https:/
 * RSS feeds
 * Custom CSS/JS
 * Multilingual months support
+* FontAwesome and Roboto(-Slab) as local used fonts
 
 ## Installation
 
@@ -25,6 +26,27 @@ git clone https://github.com/knadh/hugo-ink.git
 
 For more information read the
 [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
+
+## Fonts
+
+FontAwesome and Roboto(-Slab) are local used, so that they don't need to 
+connect to a third-party services like google-fonts.
+
+### FontAwesome for social icons
+
+FontAwesome is mainly used for the icons of the social bar in the top right
+corner of the theme. In the config of your hugo website there is a param
+called `icon` for the `params.social` section. I could look like this:
+
+```toml
+[[params.social]]
+name = "Github"
+icon = "fab fa-github"
+url = "https://github.com/knadh/hugo-ink"
+```
+
+On the [FontAwesome](https://fontawesome.com) website, you can look up every
+free icon and also the information you need to put into this `icon` param.
 
 ## Disqus
 
