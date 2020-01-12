@@ -156,7 +156,7 @@ ul.flat {
 }
 
 ul.flat li {
-    display: inline-block;
+    display: block;
     list-style: none;
     margin-left: 0;
 }
