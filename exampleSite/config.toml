@@ -53,7 +53,7 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/knadh/ink"
+url = "https://github.com/knadh/hugo-ink"
 
 [[params.social]]
 name = "RSS"
