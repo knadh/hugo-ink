@@ -18,6 +18,9 @@
 				{{- end -}}
 			</ul>
 		</nav>
+                {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
+                <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a>
+                {{- end -}}
 	</div>
 
 	<nav class="nav">
