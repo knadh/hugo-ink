@@ -32,6 +32,10 @@ a,a:hover {
 	text-decoration: none;
 }
 
+table tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .site-description a,
 .site-description a:hover {
 	color: #ddd;

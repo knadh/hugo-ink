@@ -79,6 +79,41 @@ fieldset {
     padding: 0;
 }
 
+table {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  width: 100%;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+table thead th {
+  border-bottom: 2px solid #dee2e6;
+  vertical-align: bottom;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+table th {
+  background-color: #212529;
+  border-color: #32383e;
+  color: #fff;
+}
+
 textarea {
     resize: vertical;
 }
@@ -422,5 +457,13 @@ ul {
     .header .nav li {
         margin: 0 10px 0 0;
         font-size: 14px;
+    }
+
+    table {
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      -webkit-overflow-scrolling: touch;
+      display: block;
+      overflow-x: auto;
+      width: 100%;
     }
 }
