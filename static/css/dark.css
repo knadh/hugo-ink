@@ -1,66 +1,66 @@
-body {
-	color: #ddd;
-	background-color: #000;
+html.dark body {
+  color: #ddd;
+  background-color: #000;
 }
 
-::-moz-selection {
-	background: #9375fd;
-	color: #fff;
-    text-shadow: none
+html.dark ::-moz-selection {
+  background: #9375fd;
+  color: #fff;
+  text-shadow: none
 }
 
-::selection {
-	background: #9375fd;
-	color: #fff;
-    text-shadow: none
+html.dark ::selection {
+  background: #9375fd;
+  color: #fff;
+  text-shadow: none
 }
 
-hr {
-    border-color: #333;
+html.dark hr {
+  border-color: #333;
 }
 
-blockquote {
-	border-color: #ddd;
+html.dark blockquote {
+  border-color: #ddd;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	color: #ddd;
+html.dark h1,h2,h3,h4,h5,h6 {
+  color: #ddd;
 }
 
-a,a:hover {
-	color: #9375fd;
-	text-decoration: none;
+html.dark a,a:hover {
+  color: #9375fd;
+  text-decoration: none;
 }
 
-table tbody tr:nth-of-type(even) {
+html.dark table tbody tr:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.site-description a,
-.site-description a:hover {
-	color: #ddd;
-	text-decoration: underline;
+html.dark .site-description a,
+html.dark .site-description a:hover {
+  color: #ddd;
+  text-decoration: underline;
 }
 
-a:hover {
-	opacity: 0.8;
+html.dark a:hover {
+  opacity: 0.8;
 }
 
-.post-tags .tags a {
-    border: 1px solid #ddd;
-	color: #ddd;
+html.dark .post-tags .tags a {
+  border: 1px solid #ddd;
+  color: #ddd;
 }
 
-.site-title a {
-	color: #ddd;
-	text-decoration: none !important;
+html.dark .site-title a {
+  color: #ddd;
+  text-decoration: none !important;
 }
 
-.header nav,
-.footer {
-	border-color: #333;
+html.dark .header nav,
+html.dark .footer {
+  border-color: #333;
 }
 
-.highlight {
-	background-color: #333;
+html.dark .highlight {
+  background-color: #333;
 }
