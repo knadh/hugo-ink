@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var scheme = "light";
   var savedScheme = localStorage.getItem("scheme");
 
-  var darkScheme = document.getElementById("dark-scheme");
+  var container = document.getElementsByTagName("html")[0];
   var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   if (prefersDark) {
@@ -16,30 +16,30 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   if(scheme == "dark") {
-    darkscheme(toggle, darkScheme);
+    darkscheme(toggle, container);
   } else {
-    lightscheme(toggle, darkScheme);
+    lightscheme(toggle, container);
   }
 
   toggle.addEventListener("click", () => {
     if (toggle.className === "light") {
-      darkscheme(toggle, darkScheme);
+      darkscheme(toggle, container);
     } else if (toggle.className === "dark") {
-      lightscheme(toggle, darkScheme);
+      lightscheme(toggle, container);
     }
   });
 });
 
-function darkscheme(toggle, darkScheme) {
+function darkscheme(toggle, container) {
   localStorage.setItem("scheme", "dark");
   toggle.innerHTML = feather.icons.sun.toSvg();
   toggle.className = "dark";
-  darkScheme.disabled = false;
+  container.className = "dark";
 }
 
-function lightscheme(toggle, darkScheme) {
+function lightscheme(toggle, container) {
   localStorage.setItem("scheme", "light");
   toggle.innerHTML = feather.icons.moon.toSvg();
   toggle.className = "light";
-  darkScheme.disabled = true;
+  container.className = "";
 }
