@@ -27,11 +27,14 @@
 			<div class="tags">
 				{{ if ne .Type "page" }}
 					{{ if gt .Params.tags 0 }}
+                        <br>
 						<ul class="flat">
+                            Tags:
 							{{ range .Params.tags }}
-							<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+							<span><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></span>
 							{{ end }}
 						</ul>
+                        <br>
 					{{ end }}
 				{{ end }}
 			</div>
