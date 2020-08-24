@@ -44,7 +44,7 @@ This is some static page where you can write about yourself.
 
 Due to the currently unavailable feature for multilingual dates in ``.Date`` from
 Go. It is possible to create a ``month.yaml`` in the data folder of your
-Hugo site root directoy. There is also an example file in
+Hugo site root directory. There is also an example file in
 ``exampleSite/data/``.
 
 ```sh
