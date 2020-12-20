@@ -2,7 +2,7 @@
 	{{ if .Site.Params.Avatar }}
 		<div class="avatar">
 			<a href="{{ .Site.BaseURL }}">
-				<img src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Title }}" />
+				<img src="{{ .Site.Params.Avatar | safeURL }}" alt="{{ .Site.Title }}" />
 			</a>
 		</div>
 	{{ end }}
