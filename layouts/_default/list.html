@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {{- if (eq .Site.Params.mode "dark" -)}} {{ print " class=\"dark\"" | safeHTMLAttr}}{{end}}>
+<html {{- if (eq .Site.Params.mode "dark") -}} {{ print " class=\"dark\"" | safeHTMLAttr}}{{ end }}>
 {{ partial "header.html" . }}
 
 <body>
