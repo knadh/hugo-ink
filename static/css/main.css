@@ -458,7 +458,7 @@ ul {
     }
     .header .nav li {
         margin: 0 10px 0 0;
-        font-size: 14px;
+        font-size: 0.875em;
     }
 
     table {
@@ -467,5 +467,18 @@ ul {
       display: block;
       overflow-x: auto;
       width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .header .nav.social {
+        min-width: auto;
+        margin: 0;
+    }
+    .header .site-description {
+        font-size: 1em;
+        margin-top: 10px;
+        font-size: 0.875em;
+        line-height: 1.4em;
     }
 }
