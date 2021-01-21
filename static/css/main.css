@@ -219,7 +219,7 @@ ul {
 
 .container {
     max-width: 800px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .header {
@@ -229,7 +229,7 @@ ul {
 
 .header .avatar {
     float: left;
-    margin: -25px 20px 0 0;
+    margin: 0 20px 0 0;
 }
 .header .avatar img {
     width: 64px;
@@ -238,8 +238,7 @@ ul {
     border-radius: 100%;
 }
 .header .site-title {
-    margin: 0 0 10px 0;
-    line-height: 0.2em;
+    margin: 0;
 }
     .site-title a {
         color: #333;
@@ -253,6 +252,9 @@ ul {
     display: flex;
     justify-content: space-between;
 }
+    .header .site-description p {
+        margin: 0 0 10px 0;
+    }
 
 .header nav {
     border-top: 1px solid #eee;
