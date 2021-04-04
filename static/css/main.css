@@ -219,7 +219,11 @@ ul {
 
 .container {
     max-width: 800px;
+<<<<<<< HEAD
     margin-top: 50px;
+=======
+    margin-top: 30px;
+>>>>>>> upstream/master
 }
 
 .header {
@@ -229,7 +233,11 @@ ul {
 
 .header .avatar {
     float: left;
+<<<<<<< HEAD
     margin: -25px 20px 0 0;
+=======
+    margin: 0 20px 0 0;
+>>>>>>> upstream/master
 }
 .header .avatar img {
     width: 64px;
@@ -238,8 +246,12 @@ ul {
     border-radius: 100%;
 }
 .header .site-title {
+<<<<<<< HEAD
     margin: 0 0 10px 0;
     line-height: 0.2em;
+=======
+    margin: 0;
+>>>>>>> upstream/master
 }
     .site-title a {
         color: #333;
@@ -253,6 +265,9 @@ ul {
     display: flex;
     justify-content: space-between;
 }
+    .header .site-description p {
+        margin: 0 0 10px 0;
+    }
 
 .header nav {
     border-top: 1px solid #eee;
@@ -458,7 +473,11 @@ ul {
     }
     .header .nav li {
         margin: 0 10px 0 0;
+<<<<<<< HEAD
         font-size: 14px;
+=======
+        font-size: 0.875em;
+>>>>>>> upstream/master
     }
 
     table {
@@ -467,5 +486,18 @@ ul {
       display: block;
       overflow-x: auto;
       width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .header .nav.social {
+        min-width: auto;
+        margin: 0;
+    }
+    .header .site-description {
+        font-size: 1em;
+        margin-top: 10px;
+        font-size: 0.875em;
+        line-height: 1.4em;
     }
 }
