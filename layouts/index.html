@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html {{- if (eq .Site.Params.mode "dark") -}}class="dark"{{ end }}>
+{{ if (eq .Site.Params.mode "dark") }}
+    <html class="dark">
+{{ else }}
+    <html>
+{{ end }}
+
 {{ partial "header.html" . }}
 <body>
 	<div class="container wrapper">
