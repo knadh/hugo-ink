@@ -12,10 +12,10 @@
 		<span class="description">
 			{{ if isset .Params "description" }}
 				{{ .Description }}
-			{{ else if gt (countrunes .RawContent) 120 }}
-				{{ slicestr .RawContent 0 120 }}...
+			{{ else if gt (countrunes (.Content | plainify)) 120 }}
+				{{ slicestr (.Content | plainify) 0 120 }}...
 			{{ else }}
-				{{ .RawContent }}
+				{{ .Content | plainify }}
 			{{ end }}
 		</span>
 	</div>
