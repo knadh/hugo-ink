@@ -19,7 +19,7 @@
 			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
 			{{- else -}}
 			<li class="post">
-				{{ partial "partials/post-preview.html" . }}
+				{{ partial "post-preview.html" . }}
 			</li>
 			{{- end -}}
 			{{- end -}}
