@@ -13,9 +13,9 @@
 			{{ if isset .Params "description" }}
 				{{ .Description }}
 			{{ else if gt (countrunes (.Content | plainify)) 120 }}
-				{{ slicestr (.Content | plainify) 0 120 }}...
+				{{ slicestr (.Content | plainify) 0 120 | safeHTML }}...
 			{{ else }}
-				{{ .Content | plainify }}
+				{{ .Content | plainify | safeHTML }}
 			{{ end }}
 		</span>
 	</div>
