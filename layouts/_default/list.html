@@ -15,14 +15,13 @@
 		{{ .Content }}
 
 		<ul class="posts flat">
-			{{- range .Data.Pages -}}
-			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
-			{{- else -}}
-			<li class="post">
-				{{ partial "post-preview.html" . }}
-			</li>
+			{{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
+			{{ range $paginator.Pages }}
+				<li class="post">
+					{{ partial "post-preview.html" . }}
+				</li>
 			{{- end -}}
-			{{- end -}}
+			{{ template "partials/paginator.html" . }}
 		</ul>
 	</div>
 
