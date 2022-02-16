@@ -455,6 +455,10 @@ ul {
         margin-top: 10px;
     }
 
+    .header .avatar img {
+        margin-top: 0;
+    }
+
     .header .nav.social li {
         margin: 0;
     }
