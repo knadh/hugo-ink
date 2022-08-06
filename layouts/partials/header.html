@@ -42,4 +42,8 @@
 	{{- if isset .Site.Params "customjs" -}}
 		{{- range .Site.Params.customJS }}<script src="{{ $.Site.BaseURL }}{{ . }}"></script>{{- end }}
 	{{- end }}
+
+	{{ if and (isset .Params "math") (eq .Params.math true) }}
+		{{ partial "katex.html" . }}
+	{{ end}}
 </head>

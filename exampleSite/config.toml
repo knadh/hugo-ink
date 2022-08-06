@@ -24,6 +24,8 @@ disqusShortname = "ink-demo"
 	
 	featherIconsCDN = true
 
+	katexCDN = true
+
 	mode = "auto" # "dark" or "auto"
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
