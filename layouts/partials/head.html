@@ -1,3 +1,16 @@
+{{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+
 <div class="header">
 	{{ if .Site.Params.Avatar }}
 		<div class="avatar">
