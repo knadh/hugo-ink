@@ -1,5 +1,9 @@
 {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
 
+<head>
+	{{ template "_internal/google_analytics.html" . }}
+</head>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
